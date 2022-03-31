@@ -73,8 +73,8 @@ $dics = [
   ]
 ];
 
-header('content-type: application/json');
+header('Content-Type: application/json');
 
-json_encode($dics);
+echo json_encode($dics);
 
 ?>
