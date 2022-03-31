@@ -89,7 +89,7 @@ $discs = [
 
     <header class="header">
       <figure class="logo">
-        <img src="./spotify-logo.png" alt="">
+        <img src="../spotify-logo.png" alt="">
       </figure>
     </header>
 

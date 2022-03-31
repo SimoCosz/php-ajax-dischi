@@ -1,6 +1,6 @@
 <?php
 
-$discs = [
+$dics = [
   [
     'poster' => 'https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg',
     'title' => 'New Jersey',
@@ -73,64 +73,8 @@ $discs = [
   ]
 ];
 
+header('content-type: application/json');
+
+json_encode($dics);
+
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="app.css">
-  <title>php-ajax-dischi</title>
-</head>
-<body>
-  <div id="app">
-
-    <header class="header">
-      <figure class="logo">
-        <img src="./spotify-logo.png" alt="">
-      </figure>
-    </header>
-
-  <main class="container container-main">
-    <!-- Select -->
-    <!-- <div>
-      <select @change="filterGenre" v-model="selectedGenre" name="genre" class="genre-select">
-        <option value="">All</option>
-        <option v-for="(genre, i) in genreList" :key="i" :value="genre">{{genre}}</option>
-      </select>
-      
-      <select @change="filterAuthor" v-model="selectedAuthor" name="author" class="genre-select">
-        <option value="">All</option>
-        <option v-for="(author, i) in authorList" :key="i" :value="author">{{author}}</option>
-      </select>
-    </div> -->
-
-    <div class="card-wrapper">
-
-      <!-- Card -->
-      
-      <?php
-      foreach ($discs as $value){
-        ?>
-        <div class="card">
-          <figure class="figure-card">
-            <img class="poster" src="<?php echo $value['poster'] ?>" alt="">
-          </figure>
-          <h4 class="card_title"> <?php echo $value['title'] ?></h4>
-          <p class="card_author"><?php echo $value['author'] ?></p>
-          <p class="card_year"><?php echo $value['year'] ?></p>
-        </div>
-        <?php
-      }
-      ?>
-    </div>
-  </main>
- 
-  </div>
-
-
-  <script src="app.js"></script>
-</body>
-</html>
