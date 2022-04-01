@@ -80,5 +80,18 @@ header{
   aspect-ratio: 1/1;
 }
 
-  
+.genre-select{
+  width: 200px;
+  border: none;
+  background-color: rgba(white, 0.3);
+  margin-right: 100px;
+  margin-top: 30px;
+  padding: 0 5px;
+  border-radius: 4px;
+  color: #1E2D3B;
+  font-weight: 700;
+}
 
+select{
+  margin: 0 auto;
+}

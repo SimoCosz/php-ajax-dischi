@@ -1,6 +1,6 @@
 <?php
 
-$dics = [
+$discs = [
   [
     'poster' => 'https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg',
     'title' => 'New Jersey',
@@ -73,8 +73,16 @@ $dics = [
   ]
 ];
 
+
+if(isset($_GET['genre']) && ($_GET['genre']) != ''){
+  $discs = array_filter($discs, function($el){
+    return $el['genre'] === $_GET['genre'];
+  });
+}
+
+
 header('Content-Type: application/json');
 
-echo json_encode($dics);
+echo json_encode($discs);
 
 ?>

@@ -24,17 +24,16 @@
 
       <main class="container container-main">
         <!-- Select -->
-        <!-- <div>
-          <select @change="filterGenre" v-model="selectedGenre" name="genre" class="genre-select">
+        <div class="container">
+          <!-- <select @change="filterGenre" v-model="selectedGenre" name="genre" class="genre-select">
             <option value="">All</option>
-            <option v-for="(genre, i) in genreList" :key="i" :value="genre">{{genre}}</option>
-          </select>
-          
-          <select @change="filterAuthor" v-model="selectedAuthor" name="author" class="genre-select">
+            <option v-for="(genre, i) in genreList" :value="genre">{{genre}}</option>
+          </select> -->
+          <select name="genre" class="genre-select" v-model='genre'>
             <option value="">All</option>
-            <option v-for="(author, i) in authorList" :key="i" :value="author">{{author}}</option>
+            <option v-for="genre in genreList" :value="genre">{{genre}}</option>
           </select>
-        </div> -->
+        </div>
 
         <div class="card-wrapper">
 
